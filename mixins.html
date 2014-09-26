@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><title>Mixins</title><link rel="stylesheet" href="css/docs.css"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="One great live styleguide!"><meta name="keywords" content="great,live,style,guide"><meta name="author" content="me and my friends"></head><body class="site"><div class="site__page"><header class="l-holder"><div class="l-row"><div class="header--main"><span class="header--main__mobile-trigger"></span><div class="l-row"><div class="brand"><div class="logo"></div></div></div><div class="l-row"><nav><ul class="menu--main"><li class="menu--main__item menu--main__item--home"><a href="index.html" class="link menu--main__link menu--main__link--home">Home</a></li><li class="menu--main__item"><a href="visuals.html" class="link menu--main__link">Visuals</a></li><li class="menu--main__item"><a href="mixins.html" class="link menu--main__link is-active">Mixins</a></li></ul></nav></div></div></div></header><div class="l-holder"><div class="l-row"><h1>Mixins</h1><ul class="nav--docs"><li class="nav__item"><a href="#respond" class="nav__link">Respond</a></li></ul><div><h1 id="respond">Respond<a href="#respond" class="anchor--docs"></a></h1><div><p>A longer description about the respond mixin provided by this style guide.
+Let's clarify where to use these mixins, why and how. And show some fancy
+examples!
+</p><pre class="hljs"><code class="less">.respond(<span class="hljs-variable">@device</span>, <span class="hljs-variable">@rules</span>);
+</code></pre><dl><dt>@device</dt><dd>Device on which the @rules should apply. See table below.</dd><dt>@rules</dt><dd>Rules to apply</dd></dl><table class="table--docs"><caption>Available devices</caption><tr><th>Device name</th><th>Media query</th></tr><tr><td>medium</td><td>min-width: 768px</td></tr><tr><td>large</td><td>min-width: 1024px</td></tr><tr><td>print</td><td>print</td></tr></table><pre class="hljs"><code class="less">.custom-responsive-block {
+<span class="hljs-label">  background:</span> red; <span class="hljs-comment">// default</span>
+  
+  .respond(<span class="hljs-string">'medium'</span>, {
+<span class="hljs-label">    background:</span> green; <span class="hljs-comment">// on medium and larger devices</span>
+  })
+  
+  .respond(<span class="hljs-string">'large'</span>, {
+<span class="hljs-label">    background:</span> blue; <span class="hljs-comment">// large devices</span>
+  })
+}</code></pre></div></div></div></div><footer class="l-holder"></footer></div><div class="site__mobile-nav"></div></body></html>
